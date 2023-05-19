@@ -8,7 +8,6 @@ const Todos = db.define('todos', {
     },
     description: {
         type: DataTypes.TEXT,
-        allowNull: false,
     },
     completed: {
         type: DataTypes.BOOLEAN,
