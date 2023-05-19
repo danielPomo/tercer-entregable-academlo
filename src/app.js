@@ -17,7 +17,7 @@ db.authenticate()
     .then( () => console.log("La base de datos se ha conectado de manera exitosa") )
     .catch( (err) => console.log(err) )
 
-db.sync({alter: true})
+db.sync()
     .then(() => console.log("tablas creadas con exito"))
     .catch((err) => console.log(err))
 
