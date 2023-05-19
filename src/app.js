@@ -6,6 +6,7 @@ initModels()
 require('dotenv').config()
 const usersRoutes = require('./routes/users.routes')
 const todosRoutes = require('./routes/todos.routes')
+const categoriesRoutes = require('./routes/categories.routes')
 
 
 const PORT = process.env.PORT || 8000
@@ -24,6 +25,7 @@ app.use(cors())
 app.use(express.json())
 app.use(usersRoutes)
 app.use(todosRoutes)
+app.use(categoriesRoutes)
 
 app.listen(PORT, ()=>{
     console.log(`Servidor escuchando desde el puerto ${PORT}`)
