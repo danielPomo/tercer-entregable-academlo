@@ -5,7 +5,7 @@ const Users = require('../models/users.model')
 const createTodos = async (req, res) => {
     try {
         const {title, usersId, categoriesId} = req.body
-        await Todos.create({title, usersId, categoriesId})
+        await Todos.create({title, users_id: usersId, categories_id: categoriesId})
         res.status(201).send() 
     } catch (error) {
         res.status(400).json(error)
