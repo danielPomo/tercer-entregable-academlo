@@ -42,8 +42,8 @@ const getTodosByUserId = async (req, res) => {
 const toggleCompletedAttributeOfTodos = async (req, res) => {
     try {
         const {userId, todoId} = req.params
-        const {completed} = req.body
-        const newCompletionValue = !completed
+        const completionState = Todos.findByPk(todoId).completed
+        const newCompletionValue = !completionState
         await Todos.update(
             {completed: newCompletionValue},
             {where: {
