@@ -15,7 +15,6 @@ const Todos = db.define('todos', {
     },
     usersId: {
         type: DataTypes.INTEGER,
-        allowNull: false,
         field: 'users_id'
     },
     categoriesId: {
